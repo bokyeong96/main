@@ -5,7 +5,7 @@
 ex. 
 
 
-* 실습2-6
+* 실습2-6 (구구단만들기) 
 
 import ReactDOM from 'react-dom';
 
@@ -38,3 +38,5 @@ ReactDOM.render(
   element,
   document.getElementById('root')
 );
+
+

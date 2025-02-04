@@ -5,7 +5,7 @@
 ex. 
 
 
-* 실습2-6 (구구단만들기) 
+* 실습2-6 (구구단만들기) ..
 
 import ReactDOM from 'react-dom';
 

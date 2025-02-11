@@ -284,12 +284,3 @@ ReactDOM.render(
    );
  }
 
- --> 파일을 새로 만들고
-
- Hello.js 만들고
-  
- export default function Hello() {
-   return <h1>Hello</h2>;
-
-
- }

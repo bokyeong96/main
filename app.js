@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charest="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <title>JSX Example</title>
-   <script src="https://unpkg.com/react@17/umd/react.app.js"></script>
-   <script src="https://unpkg.com/react-dom@17/umd/react-dom.app.js"></script>
-   <script src="https://unpkg.com/@babel/standalone"></script>
-</head>
-<body>
-    <div id="root"></div>
-    
-    <script type="text/babel">
-        function App() {
-        return  <div><h1>Hello,</h1></div>;       
-        }
+import Hello from "./Hello.js"; //.js를 붙이지 않아도 확장자를 읽을 수 있음 
+import World from "./World.js";
 
-        ReactDOM.render(<App />, document.getElementById('root'));
-
-  </script>
-</body>
-</html>
+export default function App() {
+  return (
+    <div>
+      <Hello></Hello>
+      <World></World> //단축하여 쓸 수도 있음 <World /> 이유는 안에 아무내용이 없어서
+    </div>
+  );
+}

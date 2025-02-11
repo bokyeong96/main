@@ -273,14 +273,32 @@ ReactDOM.render(
  여기서는 App이 컴포넌트)
 
 
- * 3-1 실습 (Hello world 쪼개기)
+ 컴포넌트 만들기
 
- export default function App() { //export하면 다른 파일에서 바로 쓸 수 있음
-   return (
-    <div>
-      <h1>Hello,</h1>
-      <h2>world</h2>
-    </div>
-   );
- }
+ 지금까지 했던 JSX와의 차이가 뭘까?
 
+ - 컴포넌트는 기본적으로 함수이기 때문에 자신만의 고유한 로직이 들어갈 수 있다.
+
+- 스스로 상태를 가질 수 있다(상태가 변하면 알아서 반영)
+
+import , export
+
+- es6에서 모듈을 불러오고 내보내는 방법 
+
+컴포넌트 생성 시, 주의사항
+
+  컴포넌트 이름은 PascalCase(각 단어의 첫 문장은 대문자로) 로 지어야한다. 
+
+  ex.
+  -MyComponent
+  -ArticlePage
+  -UserProfile
+
+  컴포넌트 생성 시, 주의사항
+
+    컴포넌트는 의미단위로 쪼개서 파일을 분리한다. 
+
+    최상위 컴포넌트 이름은 일반적으로 App이다.
+    
+    -index.js - entry point. 최종 컴포넌트를 DOM에 render(React.DOM.render)
+    -App.js -모든 컴포넌트들의 root 컴포넌트 

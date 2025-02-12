@@ -302,3 +302,83 @@ import , export
     
     -index.js - entry point. 최종 컴포넌트를 DOM에 render(React.DOM.render)
     -App.js -모든 컴포넌트들의 root 컴포넌트 
+
+
+    Props란
+
+    부모 컴포넌트에서 자식 컴포넌트로 내려주는 데이터
+
+    ex. function App() {
+          return (
+            <div>
+              <MyComponent value={'test'}/>
+          );
+        }
+
+          function MyComponent(props) {
+            return <div>{props.value}</div>;
+    }
+
+
+    Props.children
+    컴포넌트 태그로 감싼 값이 props.children으로 전달됨
+      ex. function App() {
+            return (
+              <div>
+                <MyComponent>
+              <h1>value</h1>
+                </MyComponent>
+              </div>
+            );
+          }
+          function MyComponent(props) {
+            return<div>{props.cildren}</div>
+          }
+
+
+    Props 활용 팁 !
+
+    구조분해할당 구문을 잘 활용
+    특정 Props에 기본 값을 줄 수 있다 
+    Props는 읽기 전용이다.
+
+    State란?
+      컴포넌트 내부에서 사용되는 변수
+
+      -State 값이 변하면 컴포넌트가 리렌더링 됨
+      -렌더링 사이클에서 값이 보존됨
+      -변하는 정보를 저장하는 곳
+        리액트 컴포넌트 안에서 state가 바뀌면 리액트는 자동으로 화면을 다시 그려서 바뀐 내용을 보여줌
+        마치 건물을 새로 짓는게 아니라, 필요한 부분만 싹 고쳐서 보여주는것!
+
+      ex.function App() {
+          const[Value, setValue] = useState(0);
+
+          return (
+            <div>{value}</div>
+          );
+      }
+
+
+      클래스형 컴포넌트 (클래스 문법으로 구현한 컴포넌트)
+
+      -useState와 같은 Hooks는 Reacr버전 16.8 부터 등장
+      -즉, 그 전에는 함수형 컴포넌트에서 state를 사용할 수 없었고, 클래스형 컴포넌트만 state를 가질 수 있다
+      -클래스의 멤버변수로 state정의
+      -render라는 멤버함수에서 반환한 값(JSX)이 화면에 그려짐
+      
+      ex. export default class App extends Component{
+        state = {
+          value : 0
+        }
+      }
+
+      (**함수형은 
+      
+       const [value, setValue] = useState(0); )
+
+
+      Hooks는 왜 등장했을까?
+      -초기에는 클래스형 컴포넌트가 기본이였음
+      -하지만, 클래스형 컴포넌트의 몇 가지 문제로 인해 새로운 방식 고안(이해하기 어려움, 코드 재사용성 떨어짐 등)
+      -지금은 Hooks가 완전히 기본형으로 사용됨(클래스형은 레거시로 볼 수 있음)

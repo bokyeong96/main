@@ -1,0 +1,60 @@
+ul,
+li {
+    list-style-type: none;
+
+    margin: 0;
+
+}
+
+.CourseCard {
+
+    max-width: 300px;
+}
+
+.cover {
+    width: 100%;
+
+}
+
+.cover img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.tags {
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.47;
+    padding: 3px 0 5px 0;
+}
+
+.tags .tags:not(:last-child):after {
+    content: '.';
+}
+
+.name {
+    margin: 0;
+    padding: 6px 0;
+}
+
+.price {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0.8rem 0 0.5rem;
+}
+
+.types {
+    padding: 0;
+}
+
+.types .type {
+    font-size: 0.6rem;
+    font-weight: 600;
+    padding: 6px;
+    background-color: #e6e7eb;
+    border-radius: 4px;
+    color: #3246f0;
+    margin-right: 5px;
+    display: inline-block;
+}

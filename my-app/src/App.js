@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import CourseCard  from "./components/CourseCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{padding:30}}>
+        <CourseCard
+          img="https://dst6jalxvbuf5.cloudfront.net/media/images/Course/cover_image/210706_000611/charactergoods_23.png"
+          tags={['발표', '패키지', '최대할인']}
+          title="비즈니스 올인원, 방구석 어학연수 패키지"
+          startPrice={349000}
+          types={['동영상 강의']}
+        />
     </div>
   );
 }
